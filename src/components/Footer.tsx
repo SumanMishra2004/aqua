@@ -4,18 +4,13 @@ import { motion } from "framer-motion";
 import { Droplets, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
-  const teamMembers = [
-    "Your Name",
-    "Team Member 2",
-    "Team Member 3",
-    "Team Member 4",
-  ];
-
   const links = [
-    { label: "Documentation", href: "#" },
-    { label: "Research Paper", href: "#" },
-    { label: "GitHub Repository", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Project Overview", href: "#project-summary" },
+    { label: "Problem Statement", href: "#problem" },
+    { label: "System Architecture", href: "#architecture" },
+    { label: "Live Metrics", href: "#live-metrics" },
+    { label: "Research Team", href: "#research-team" },
+    { label: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -51,7 +46,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,21 +70,25 @@ export default function Footer() {
             <div className="flex gap-3">
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-blue-100 rounded-lg text-blue-600 hover:bg-blue-200 smooth-transition"
               >
                 <Github className="w-5 h-5" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-blue-100 rounded-lg text-blue-600 hover:bg-blue-200 smooth-transition"
               >
                 <Linkedin className="w-5 h-5" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
+                href="mailto:aquasmart@uem.edu.in"
                 className="p-2 bg-blue-100 rounded-lg text-blue-600 hover:bg-blue-200 smooth-transition"
               >
                 <Mail className="w-5 h-5" />
@@ -120,36 +119,12 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Team Members */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="font-bold text-gray-800 mb-4">Team Members</h3>
-            <ul className="space-y-2">
-              {teamMembers.map((member, index) => (
-                <motion.li
-                  key={member}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="text-gray-600 text-sm"
-                >
-                  {member}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
           {/* University Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="font-bold text-gray-800 mb-4">Institution</h3>
             <div className="space-y-3">
@@ -182,8 +157,7 @@ export default function Footer() {
           className="flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-sm text-gray-600 text-center md:text-left">
-            © 2024 AquaSmart Project. All rights reserved. Built with Next.js &
-            shadcn/ui
+            © 2024-2025 AquaSmart Research Project. University of Engineering & Management, Kolkata. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-xs text-gray-500">Made with</span>

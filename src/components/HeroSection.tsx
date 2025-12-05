@@ -86,21 +86,24 @@ export default function HeroSection() {
         >
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 py-6 text-lg group"
-          >
-            Connect Hardware
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg group"
+            className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 py-6 text-lg group shadow-lg hover:shadow-xl transition-all"
             asChild
           >
             <a href="/report.pdf" download="AquaSmart_Project_Report.pdf">
               <Download className="mr-2 w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
-              Download Report
+              Download Full Report
+            </a>
+          </Button>
+          
+         
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-8 py-6 text-lg group"
+            asChild
+          >
+            <a href="#contact">
+              Contact Research Team
             </a>
           </Button>
         </motion.div>
@@ -113,10 +116,10 @@ export default function HeroSection() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
         >
           {[
-            { label: "Accuracy", value: "83%", color: "blue" },
-            { label: "Water Saved", value: "20%", color: "cyan" },
-            { label: "Energy Efficient", value: "40%", color: "blue" },
-            { label: "Real-time", value: "24/7", color: "cyan" },
+            { label: "ML Accuracy", value: "90%+", color: "blue" },
+            { label: "Water Quality Improved", value: "20%", color: "cyan" },
+            { label: "Energy Cost Saved", value: "40%", color: "blue" },
+            { label: "Real-time Monitoring", value: "24/7", color: "cyan" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

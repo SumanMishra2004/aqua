@@ -37,6 +37,7 @@ const techStack = [
     technologies: [
       "Random Forest",
       "Support Vector Machine",
+      "Convolutional Neural Networks",
       "TensorFlow",
       "Scikit-learn",
       "Python",
@@ -46,7 +47,7 @@ const techStack = [
     category: "Cloud Platform",
     icon: Cloud,
     color: "#0A4D8C",
-    technologies: ["AWS IoT", "MongoDB", "REST API", "MQTT Protocol"],
+    technologies: [, "MongoDB", "REST API", "MQTT Protocol"],
   },
   {
     category: "Power System",
